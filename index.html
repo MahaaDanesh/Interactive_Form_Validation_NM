@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="card">
+    <h2>Interactive Form Validation</h2>
+    <div class="progress-bar"><div></div></div>
+    
+    <form id="multiStepForm">
+      <!-- Step 1 -->
+      <div class="step step-1">
+        <input type="text" id="name" placeholder="Full Name">
+        <input type="email" id="email" placeholder="Email">
+        <button type="button" id="next1" class="btn">Next</button>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="step step-2 hidden">
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <div class="pw-meter"><div></div></div>
+        <button type="button" id="back2" class="btn ghost">Back</button>
+        <button type="button" id="next2" class="btn">Next</button>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="step step-3 hidden">
+        <label>Do you own a car?</label>
+        <input type="radio" name="car" value="Yes"> Yes
+        <input type="radio" name="car" value="No"> No
+        <input type="text" id="carModel" placeholder="Car Model" class="hidden">
+        <button type="button" id="back3" class="btn ghost">Back</button>
+        <button type="submit" class="btn">Submit</button>
+      </div>
+    </form>
+
+    <div id="successMsg" class="hidden">🎉 Form submitted successfully!</div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
